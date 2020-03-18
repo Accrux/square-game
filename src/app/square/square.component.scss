@@ -1,0 +1,36 @@
+
+@mixin before-flex-item {
+  content:'';
+  float:left;
+  padding-top:90%;
+  width: 90%;
+}
+
+
+.square {
+    &:before {
+    @include before-flex-item();
+    background: blue;
+  }
+}
+
+.square-active {
+  &:before {
+   @include before-flex-item();
+   background: yellow;
+ }
+}
+
+.square-failed {
+  &:before {
+   @include before-flex-item();
+   background: red;
+ }
+}
+
+.square-ok {
+  &:before {
+   @include before-flex-item();
+   background: green;
+ }
+}

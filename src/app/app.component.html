@@ -1,0 +1,17 @@
+
+
+<div class="board">
+      <div class="center-btn">
+            <button (click)="startGame(delay.value)" [disabled]="!childsReady" mat-fab color="primary">Start</button>
+            <mat-form-field class="interval-field">
+                  <mat-label>Choose interval</mat-label>
+                  <input type="number" min="0" restrict-input="^[0-9-]*$" required #delay matInput placeholder="in ms only positive">
+                </mat-form-field>
+            <app-info></app-info>
+      </div>
+<div class="flex-container">
+      <app-square  *ngFor="let square of squaresArr"></app-square> 
+       
+</div>
+</div>
+    
